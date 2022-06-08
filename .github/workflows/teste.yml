@@ -1,0 +1,14 @@
+name: Git Action
+on: [push]
+jobs:
+  check-angular-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g @angular/cli
+      - run: npm install
+      - run: ng build
+      - run: ng version
