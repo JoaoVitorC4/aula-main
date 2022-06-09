@@ -10,5 +10,4 @@ jobs:
           node-version: 16
       - run: npm install -g @angular/cli
       - run: npm install
-      - run: ng build
       - run: ng version
